@@ -43,7 +43,7 @@ app.post('/checkout', function(req, res) {
           const itemJson = itemsArray.find(function(i) {
             return i.id == item.id
           })
-          total = total + itemJson.price * item.quantity
+          total = total + itemJson.price * item.quantity 
         })
   
         stripe.charges.create({
@@ -52,7 +52,7 @@ app.post('/checkout', function(req, res) {
           currency: 'usd'
         }).then(function() {
           console.log('Charge Successful')
-          res.json({ message: 'Successfully purchased items' })
+          res.json({ message: `Your purchase is successful. Your total is ${total / 100}! Your Charge ID is ${id}` })
         }).catch(function() {
           console.log('Charge Fail')
           res.status(500).end()
