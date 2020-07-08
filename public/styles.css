@@ -46,7 +46,7 @@ html, body {
     padding: 0 1.5em;
 }
 .section-header {
-    font-family: "Metal Mania";
+    font-family: Raleway;
     font-weight: normal;
     color: #333;
     text-align: center;
@@ -186,7 +186,7 @@ html, body {
 
 .cart-item {
     width: 45%;
-    f
+    
 }
 
 .cart-price {
