@@ -18,39 +18,16 @@
         <section class="container content-section">
             <h2 class="section-header">Items</h2>
             <div class="shop-items">
-                <div class="shop-item">
-                    <span class="shop-item-title">Centered</span>
-                    <img class="shop-item-image" src="Images/image1.jpeg">
+                <% items.items.forEach(function(item){ %>
+                    <div class="shop-item" data-item-id="<%= item.id %>">
+                    <span class="shop-item-title"><%= item.name %></span>
+                    <img class="shop-item-image" src="Images/<%= item.imageName %>">
                     <div class="shop-item-details">
-                        <span class="shop-item-price">$23.00</span>
+                        <span class="shop-item-price"><%= item.price / 100 %></span>
                         <button class="btn btn-primary shop-item-button" id= "move" type="button">ADD TO CART</button>
                     </div>
                 </div>
-                <div class="shop-item">
-                    <span class="shop-item-title">Rainbow</span>
-                    <img class="shop-item-image" src="Images/image2.jpeg">
-                    <div class="shop-item-details">
-                        <span class="shop-item-price">$39.99</span>
-                        <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="shop-item">
-                    <span class="shop-item-title">Breathe</span>
-                    <img class="shop-item-image" src="Images/image3.jpeg">
-                    <div class="shop-item-details">
-                        <span class="shop-item-price">$29.99</span>
-                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="shop-item">
-                    <span class="shop-item-title">Just Being</span>
-                    <img class="shop-item-image" src="Images/image4.jpeg">
-                    <div class="shop-item-details">
-                        <span class="shop-item-price">$49.99</span>
-                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
-                    </div>
-                </div>
-            </div>
+               <% }) %>
         </section>
         <section class="container content-section">
             <h2 class="section-header"></h2>

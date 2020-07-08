@@ -16,7 +16,15 @@ app.set('view engine', 'ejs')
 app.use(express.static('public'))
 
 app.get('/store', function (req, res) {
-
+fs.readFile('items.json', function (error, data){
+    if (error) {
+        res.status(500).end()
+    } else {
+      res.render('store.ejs', {
+          items: JSON.parse(data)
+      })
+    }
+})
 
 })
 
