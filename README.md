@@ -71,5 +71,5 @@ Node.js allows me to build server-side applications in JavaScript. Thus, it was 
 
 ## How to Extend App 
 
-I want to extend this app with the intent of providing users a seamless and end-to-end payment experience. Features to include are, but not limited to, authentication, automatic emails with payment receipts, or a refund feature. 
+I want to extend this app with the intent of providing users a seamless and end-to-end payment experience. Features to include are, but not limited to, authentication, automatic emails with payment receipts, or refund. 
 
