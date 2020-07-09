@@ -17,8 +17,9 @@ The Checkout pop-up will collect the user’s information and send it to Stripe.
 
 </b>
 </b>
+</b>
 
-3. User will receive a payment confirmation isplaying the total amount of the charge and Stripe charge Id.
+3. User will receive a payment confirmation displaying the total amount of the charge and Stripe charge Id.
 
 ![Payment Confirmation](images/image4.png)
 
@@ -29,14 +30,8 @@ The Checkout pop-up will collect the user’s information and send it to Stripe.
 </b>
 </b>
 
-#### Libraries Used :
 
-* [EJS](https://ejs.co/):
-* [Express](https://expressjs.com/):
-* [Strip](https://stripe.com/docs/development/quickstart):
-
-
-#### Run App Locally
+#### Run App Locally:
 
 
 1. Clone app from Github
@@ -60,12 +55,20 @@ node server.js
 
 4. Go to `localhost:3000` to add items to cart, checkout, and receive payment confirmation
 
+
 ## Design Approach
+
 
 
 
 ## Language/Frameworks Used
 
+* [EJS](https://ejs.co/):
+* [Express](https://expressjs.com/):
+
+
+
 
 
 ## How to Extend App with Stripe
+

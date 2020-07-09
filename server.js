@@ -49,7 +49,7 @@ app.post('/checkout', function(req, res) {
 
       stripe.charges.create(
         {
-          amount: 2000,
+          amount: total,
           currency: 'usd',
           source: req.body.stripeTokenId,
         }, 
