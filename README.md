@@ -6,8 +6,6 @@
 
 Utilizing the [Charges](https://stripe.com/docs/api/charges) and [Tokens](https://stripe.com/docs/api/tokens) APIs, this Express app allows users to accept payments through Stripe [Checkout](https://stripe.com/docs/payments/checkout). Upon a successful payment, the app returns a JSON response displaying the total amount of the charge and Stripe charge Id.
 
-</br>
-
 #### Design Flow:
 
 * When a user clicks on the ‘Add to Cart’ button, selected items will be added to a cart at the bottom of the page. Users can modify the item quantity,  remove the item, or add additional items. 
