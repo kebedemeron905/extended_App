@@ -4,6 +4,8 @@
 
 ## Application Overview 
 
+<a href="https://stripe.com/docs/payments/checkout">Checkout</a>
+
 
 
 ## Design Approach

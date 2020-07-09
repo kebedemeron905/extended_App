@@ -31,42 +31,6 @@ fs.readFile('items.json', function (error, data){
 
 })
 
-
-
-// app.post('/checkout', function(req, res) {
-//     fs.readFile('items.json', function(error, data) {
-//       if (error) {
-//         res.status(500).end()
-//       } else {
-//         const itemsJson = JSON.parse(data)
-//         const itemsArray = itemsJson.items
-//         let total = 0
-//         req.body.items.forEach(function(item) {
-//           const itemJson = itemsArray.find(function(i) {
-//             return i.id == item.id
-            
-//           })
-//           total = total + itemJson.price * item.quantity 
-//         })
-  
-//         stripe.charges.create({
-//           amount: total,
-//           source: req.body.stripeTokenId,
-//           currency: 'usd',
-//           description: "Charge"
-//         }).then(function() {
-//           console.log('Charge Successful')
-//           res.json({ message: `Your purchase is successful. Your total is $${total / 100}!` })
-//         }).catch(function() {
-//           console.log('Charge Fail')
-//           res.status(500).end()
-//         })
-  
-//       }
-//     })
-//   })
-
- 
 app.post('/checkout', function(req, res) {
   fs.readFile('items.json', function(error, data) {
     if (error) {
