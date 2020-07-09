@@ -2,7 +2,7 @@
    "items"  :[
 
      {
-        "id": "ch_1",
+        "id": "1",
         "name": "Centered",
         "price": 2399,
         "imageName": "image1.jpeg"
@@ -11,7 +11,7 @@
 
 
      {
-        "id": "ch_2",
+        "id": "2",
         "name": "Rainbow",
         "price": 3999,
         "imageName": "image2.jpeg"
@@ -19,7 +19,7 @@
      },
 
      {
-        "id": "ch_3",
+        "id": "3",
         "name": "Breathe",
         "price": 2999,
         "imageName": "image3.jpeg"
@@ -27,7 +27,7 @@
      },
 
      {
-        "id": "ch_4",
+        "id": "4",
         "name": "Just Being",
         "price": 4999,
         "imageName": "image4.jpeg"

@@ -10,6 +10,7 @@ const app = express ()
 const fs = require ('fs')
 const { request } = require('http')
 const stripe = require('stripe')(stripeSecretKey)
+const bodyParser = require('body-parser');
 
 
 app.set('view engine', 'ejs')
@@ -30,6 +31,23 @@ fs.readFile('items.json', function (error, data){
 
 })
 
+app.post('/charge', bodyParser, function(req, res) {
+
+  // grab a token
+  var token = req.body.stripeToken;
+
+  // creating a charge, for real use add things like error handling
+  stripe.charges.create({
+  amount: 2000,
+  currency: "usd",
+  source: token, // obtained with Stripe.js
+  description: "Charge"
+  }, function(err, charge) {
+    console.log(charge.id)
+    res.send("You made a charge: "+ charge.id);
+  });
+});
+
 
 app.post('/checkout', function(req, res) {
     fs.readFile('items.json', function(error, data) {
@@ -42,6 +60,7 @@ app.post('/checkout', function(req, res) {
         req.body.items.forEach(function(item) {
           const itemJson = itemsArray.find(function(i) {
             return i.id == item.id
+            
           })
           total = total + itemJson.price * item.quantity 
         })
@@ -49,17 +68,22 @@ app.post('/checkout', function(req, res) {
         stripe.charges.create({
           amount: total,
           source: req.body.stripeTokenId,
-          currency: 'usd'
+          currency: 'usd',
+          description: "Charge"
         }).then(function() {
           console.log('Charge Successful')
-          res.json({ message: `Your purchase is successful. Your total is ${total / 100}! Your Charge ID is ${id}` })
+          res.json({ message: `Your purchase is successful. Your total is $${total / 100}!` })
         }).catch(function() {
           console.log('Charge Fail')
           res.status(500).end()
         })
+  
       }
     })
   })
+
+ 
+
   
 
 app.listen(3000)
