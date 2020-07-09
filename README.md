@@ -6,10 +6,22 @@ Utilizing the [Charges](https://stripe.com/docs/api/charges) and [Tokens](https:
 
 #### Design Flow:
 
-* When a user clicks on the ‘Add to Cart’ button, selected items will be added to a cart at the bottom of the page. Users can modify the item quantity,  remove the item, or add additional items. 
+1. User clicks on the ‘Add to Cart’ button to add selected items to a cart at the bottom of the page. Users can modify item quantity, remove item, or add additional items. 
 
 ![Add to Cart](images/image2.png)
 
+2. User clicks on the ‘Checkout’ button. This prompts the user to enter his/her payment information in the Strip Checkout pop-up. 
+
+![Enter Payment Info](images/image3.png)
+
+3. When a user clicks the ‘Checkout’ button, the Stripe Checkout popup will appear, allowing the user to enter their payment information.
+
+
+4. User will receive a payment confirmation isplaying the total amount of the charge and Stripe charge Id.
+![Enter Payment Info](images/image4.png)
+
+
+5. User clicks OK to reset cart to $0. 
 
 #### Libraries Used :
 
