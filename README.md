@@ -18,7 +18,8 @@ Utilizing the [Charges](https://stripe.com/docs/api/charges) and [Tokens](https:
 
 
 4. User will receive a payment confirmation isplaying the total amount of the charge and Stripe charge Id.
-![Enter Payment Info](images/image4.png)
+
+![Payment Confirmation](images/image4.png)
 
 
 5. User clicks OK to reset cart to $0. 
