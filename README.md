@@ -2,7 +2,7 @@
 
 ## Application Overview 
 
-Utilizing the [Charges](https://stripe.com/docs/api/charges) and [Tokens](https://stripe.com/docs/api/tokens) APIs, this Express app allows users to accept payments through Stripe [Checkout](https://stripe.com/docs/payments/checkout). Upon a successful payment, the app returns a JSON response displaying the total amount of the charge and Stripe charge Id.
+Utilizing the [Charges](https://stripe.com/docs/api/charges) and [Tokens](https://stripe.com/docs/api/tokens) APIs, this Express app allows users to accept payments through Stripe [Checkout](https://stripe.com/docs/payments/checkout). Upon a successful payment, the app returns a JSON response displaying the total amount of the charge and the Stripe charge Id.
 
 #### Design Approach:
 
@@ -19,7 +19,7 @@ Utilizing the [Charges](https://stripe.com/docs/api/charges) and [Tokens](https:
 </b>
 </b>
 
-3. The user will receive a payment confirmation displaying the total amount of the charge and Stripe charge Id.
+3. The user will receive a payment confirmation displaying the total amount of the charge and the Stripe charge Id.
 
 ![Payment Confirmation](images/image4.png)
 
@@ -59,17 +59,17 @@ node server.js
 </br>
 </br>
 
-## Language/Frameworks/ Used
+## Language/Frameworks Used
 
 * [EJS](https://ejs.co/)
 * [Node.js](https://nodejs.org/en/about/)
 * [Express](https://expressjs.com/)
 * [Stripe](https://expressjs.com/)
 
-Node.js allows me to build server-side applications in JavaScript. Thus, it was my language of choice. I chose Express as my web framework for multiple reasons: it is a minimalist framework; it is the most common framework used for developing Node.js; it makes Node.js app development fast; and it easily integrates with different template engines like EJS. With RESTful routing, Express also integrates well with Stripe. I'm using the Stripe library because it enables communication with the Charges and Tokens APIs. Lastly, I chose EJS as my view templating language because it allows server side code in html.
+Node.js allows me to build server-side applications in JavaScript. Thus, making it my language of choice. I chose Express as my web framework for multiple reasons: it is a minimalist framework; it is the most common framework used for developing Node.js; it makes Node.js app development fast; and it easily integrates with different template engines like EJS. Express also integrates well with Stripe. I'm using the Stripe library because it enables communication with the Charges and Tokens APIs. Lastly, I chose EJS as my template engine because it allows server side code in html.
 
 
 ## How to Extend App 
 
-I want to extend this app with the intent of providing users a seamless and end-to-end payment experience. Thus, I want the app to include authentication, automatic emails with payment receipts, or a refund feature. 
+I want to extend this app with the intent of providing users a seamless and end-to-end payment experience. Features to include are, but not limited to, authentication, automatic emails with payment receipts, or a refund feature. 
 
