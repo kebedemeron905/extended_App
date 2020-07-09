@@ -10,7 +10,7 @@ Utilizing the [Charges](https://stripe.com/docs/api/charges) and [Tokens](https:
 
 ![Add to Cart](images/image2.png)
 
-2. Once the user finalizes the items in the cart, they click the ‘Checkout’ button. This prompts the user to enter his/her payment information in the Stripe Checkout pop-up. The Checkout pop-up will then collect the user’s information and send it to Stripe. Stripe will parse this information, tokenize it, and send the token to the server created in this sample application. Using the token along with the secret API key, we then create charges on the server. After a charge is created, we can always confirm that the total amount the user paid is equivalent to the amount they are being charged through the Stripe Dashboard.
+2. Once the user finalizes the items in the cart, he/she clicks the ‘Checkout’ button. This prompts the user to enter his/her payment information in the Stripe Checkout pop-up. The Checkout pop-up will then collect the user’s information and send it to Stripe. Stripe will parse this information, tokenize it, and send the token to the server created in this sample application. Using the token along with the secret API key, we then create charges on the server. After a charge is created, we can always confirm that the total amount the user paid is equivalent to the amount they are being charged through the Stripe Dashboard.
 
 
 ![Enter Payment Info](images/image3.png)
