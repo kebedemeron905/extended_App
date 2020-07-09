@@ -66,7 +66,7 @@ node server.js
 * [Express](https://expressjs.com/)
 * [Stripe](https://expressjs.com/)
 
-Node.js allows me to build server-side applications in JavaScript. Thus, making it my language of choice. I chose Express as my web framework for multiple reasons: it is a minimalist framework; it is the most common framework used for developing Node.js; it makes Node.js app development fast; and it easily integrates with different template engines like EJS. Express also integrates well with Stripe. I'm using the Stripe library because it enables communication with the Charges and Tokens APIs. Lastly, I chose EJS as my template engine because it allows server side code in html.
+Node.js allows me to build server-side applications in JavaScript. Thus, it was my language of choice. I chose Express as my web framework for multiple reasons: it is a minimalist framework; it is the most common framework used for developing Node.js; it makes Node.js app development fast; and it easily integrates with different template engines like EJS. Express also integrates well with Stripe. I'm using the Stripe library because it enables communication with the Charges and Tokens APIs. Lastly, I chose EJS as my template engine because it allows server side code in html.
 
 
 ## How to Extend App 
