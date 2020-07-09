@@ -6,13 +6,12 @@ Utilizing the [Charges](https://stripe.com/docs/api/charges) and [Tokens](https:
 
 #### Design Approach:
 
-1. User clicks on the ‘Add to Cart’ button to add selected items to a cart at the bottom of the page. Users can modify item quantity, remove item, or add additional items.
+1. When a user clicks on the ‘Add to Cart’ button, selected items get added to the cart at the bottom of the page. Users can modify item quantity, remove item, or add additional items.
 
 ![Add to Cart](images/image2.png)
 
-2. User clicks on the ‘Checkout’ button. This prompts the user to enter his/her payment information in the Strip Checkout pop-up. 
-The Checkout pop-up will collect the user’s information and send it to Stripe. Stripe will then parse this information, tokenize it, and send the token to the server we created in this sample application. Using the token and the secret API key, we can then create charges on the server. 
-Once the charge is created, you can confirm that the total amount the user paid is the same as the amount they are being charged through the Stripe Dashboard.
+2. Once the user finalizes the items in the cart, they click the ‘Checkout’ button. This prompts the user to enter his/her payment information in the Stripe Checkout pop-up. The Checkout pop-up will then collect the user’s information and send it to Stripe. Stripe will parse this information, tokenize it, and send the token to the server created in this sample application. Using the token along with the secret API key, we then create charges on the server. After a charge is created, we can always confirm that the total amount the user paid is equivalent to the amount they are being charged through the Stripe Dashboard.
+
 
 ![Enter Payment Info](images/image3.png)
 
@@ -20,13 +19,13 @@ Once the charge is created, you can confirm that the total amount the user paid 
 </b>
 </b>
 
-3. User will receive a payment confirmation displaying the total amount of the charge and Stripe charge Id.
+3. The user will receive a payment confirmation displaying the total amount of the charge and Stripe charge Id.
 
 ![Payment Confirmation](images/image4.png)
 
 </b>
 </b>
-4. User clicks OK to reset cart to $0. 
+4. When a user clicks OK, the cart resets to $0. 
 
 </b>
 </b>
@@ -66,7 +65,7 @@ node server.js
 * [Node.js](https://nodejs.org/en/about/)
 * [Express](https://expressjs.com/)
 
-Node.js allows me to build server-side applications in JavaScript. Thus, it was my language of choice. I chose Express as my web framework for multiple reasons: it is a minimalist framework; it is the most common framework used for developing Node.js; it makes Node.js app development fast and easy; and, it easily integrates with different template engines like EJS. Lastly, I chose EJS as my view templating language because it allows me to put server side code in my html.
+Node.js allows me to build server-side applications in JavaScript. Thus, it was my language of choice. I chose Express as my web framework for multiple reasons: it is a minimalist framework; it is the most common framework used for developing Node.js; it makes Node.js app development fast; and easily integrates with different template engines like EJS. Lastly, I chose EJS as my view templating language because it allows me to put server side code in my html.
 
 </br>
 
