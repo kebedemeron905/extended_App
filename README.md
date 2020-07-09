@@ -4,7 +4,7 @@
 
 Utilizing the [Charges](https://stripe.com/docs/api/charges) and [Tokens](https://stripe.com/docs/api/tokens) APIs, this Express app allows users to accept payments through Stripe [Checkout](https://stripe.com/docs/payments/checkout). Upon a successful payment, the app returns a JSON response displaying the total amount of the charge and Stripe charge Id.
 
-#### Design Flow:
+#### Design Approach:
 
 1. User clicks on the ‘Add to Cart’ button to add selected items to a cart at the bottom of the page. Users can modify item quantity, remove item, or add additional items.
 
@@ -12,6 +12,7 @@ Utilizing the [Charges](https://stripe.com/docs/api/charges) and [Tokens](https:
 
 2. User clicks on the ‘Checkout’ button. This prompts the user to enter his/her payment information in the Strip Checkout pop-up. 
 The Checkout pop-up will collect the user’s information and send it to Stripe. Stripe will then parse this information, tokenize it, and send the token to the server we created in this sample application. Using the token and the secret API key, we can then create charges on the server. 
+Once the charge is created, you can confirm that the total amount the user paid is the same as the amount they are being charged through the Stripe Dashboard.
 
 ![Enter Payment Info](images/image3.png)
 
@@ -59,17 +60,11 @@ node server.js
 </br>
 </br>
 
-## App Design Approach
-
-
-
-
-
 ## Language/Frameworks Used
 
-* [EJS](https://ejs.co/):
-* [Node.js](https://nodejs.org/en/about/):
-* [Express](https://expressjs.com/):
+* [EJS](https://ejs.co/)
+* [Node.js](https://nodejs.org/en/about/)
+* [Express](https://expressjs.com/)
 
 Node.js allows me to build server-side applications in JavaScript. Thus, it was my language of choice. I chose Express as my web framework for multiple reasons: it is a minimalist framework; it is the most common framework used for developing Node.js; it makes Node.js app development fast and easy; and, it easily integrates with different template engines like EJS. Lastly, I chose EJS as my view templating language because it allows me to put server side code in my html.
 
