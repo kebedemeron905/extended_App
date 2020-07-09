@@ -59,15 +59,15 @@ node server.js
 </br>
 </br>
 
-## Language/Frameworks Used
+## Language/Frameworks/ Used
 
 * [EJS](https://ejs.co/)
 * [Node.js](https://nodejs.org/en/about/)
 * [Express](https://expressjs.com/)
+* [Stripe](https://expressjs.com/)
 
-Node.js allows me to build server-side applications in JavaScript. Thus, it was my language of choice. I chose Express as my web framework for multiple reasons: it is a minimalist framework; it is the most common framework used for developing Node.js; it makes Node.js app development fast; and easily integrates with different template engines like EJS. Lastly, I chose EJS as my view templating language because it allows me to put server side code in my html.
+Node.js allows me to build server-side applications in JavaScript. Thus, it was my language of choice. I chose Express as my web framework for multiple reasons: it is a minimalist framework; it is the most common framework used for developing Node.js; it makes Node.js app development fast; and it easily integrates with different template engines like EJS. With RESTful routing, Express also integrates well with Stripe. I'm using the Stripe library because it enables communication with the Charges and Tokens APIs. Lastly, I chose EJS as my view templating language because it allows server side code in html.
 
-</br>
 
 ## How to Extend App 
 
