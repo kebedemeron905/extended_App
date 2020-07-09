@@ -14,15 +14,19 @@ Utilizing the [Charges](https://stripe.com/docs/api/charges) and [Tokens](https:
 
 ![Enter Payment Info](images/image3.png)
 
-3. When a user clicks the ‘Checkout’ button, the Stripe Checkout popup will appear, allowing the user to enter their payment information.
+</b>
+
+The Checkout pop-up will collect the user’s information and send it to Stripe. Stripe will then parse this information, tokenize it, and send the token to the server we created in this sample application. Using the token and the secret API key, we can then create charges on the server.
 
 
-4. User will receive a payment confirmation isplaying the total amount of the charge and Stripe charge Id.
+3. User will receive a payment confirmation isplaying the total amount of the charge and Stripe charge Id.
 
 ![Payment Confirmation](images/image4.png)
 
 
-5. User clicks OK to reset cart to $0. 
+4. User clicks OK to reset cart to $0. 
+
+
 
 #### Libraries Used :
 
@@ -53,7 +57,7 @@ npm install --save express ejs stripe
 node server.js
 ```
 
-4. Go to `localhost:3000` to make add items to cart, checkout, and receive payment confirmation
+4. Go to `localhost:3000` to add items to cart, checkout, and receive payment confirmation
 
 ## Design Approach
 
