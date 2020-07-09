@@ -11,8 +11,6 @@ Utilizing the [Charges](https://stripe.com/docs/api/charges) and [Tokens](https:
 ![Add to Cart](images/image2.png)
 
 2. User clicks on the ‘Checkout’ button. This prompts the user to enter his/her payment information in the Strip Checkout pop-up. 
-</br>
-
 The Checkout pop-up will collect the user’s information and send it to Stripe. Stripe will then parse this information, tokenize it, and send the token to the server we created in this sample application. Using the token and the secret API key, we can then create charges on the server. 
 
 ![Enter Payment Info](images/image3.png)
