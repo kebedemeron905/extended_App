@@ -31,60 +31,76 @@ fs.readFile('items.json', function (error, data){
 
 })
 
-app.post('/charge', bodyParser, function(req, res) {
-
-  // grab a token
-  var token = req.body.stripeToken;
-
-  // creating a charge, for real use add things like error handling
-  stripe.charges.create({
-  amount: 2000,
-  currency: "usd",
-  source: token, // obtained with Stripe.js
-  description: "Charge"
-  }, function(err, charge) {
-    console.log(charge.id)
-    res.send("You made a charge: "+ charge.id);
-  });
-});
 
 
-app.post('/checkout', function(req, res) {
-    fs.readFile('items.json', function(error, data) {
-      if (error) {
-        res.status(500).end()
-      } else {
-        const itemsJson = JSON.parse(data)
-        const itemsArray = itemsJson.items
-        let total = 0
-        req.body.items.forEach(function(item) {
-          const itemJson = itemsArray.find(function(i) {
-            return i.id == item.id
+// app.post('/checkout', function(req, res) {
+//     fs.readFile('items.json', function(error, data) {
+//       if (error) {
+//         res.status(500).end()
+//       } else {
+//         const itemsJson = JSON.parse(data)
+//         const itemsArray = itemsJson.items
+//         let total = 0
+//         req.body.items.forEach(function(item) {
+//           const itemJson = itemsArray.find(function(i) {
+//             return i.id == item.id
             
-          })
-          total = total + itemJson.price * item.quantity 
-        })
+//           })
+//           total = total + itemJson.price * item.quantity 
+//         })
   
-        stripe.charges.create({
-          amount: total,
-          source: req.body.stripeTokenId,
-          currency: 'usd',
-          description: "Charge"
-        }).then(function() {
-          console.log('Charge Successful')
-          res.json({ message: `Your purchase is successful. Your total is $${total / 100}!` })
-        }).catch(function() {
-          console.log('Charge Fail')
-          res.status(500).end()
-        })
+//         stripe.charges.create({
+//           amount: total,
+//           source: req.body.stripeTokenId,
+//           currency: 'usd',
+//           description: "Charge"
+//         }).then(function() {
+//           console.log('Charge Successful')
+//           res.json({ message: `Your purchase is successful. Your total is $${total / 100}!` })
+//         }).catch(function() {
+//           console.log('Charge Fail')
+//           res.status(500).end()
+//         })
   
-      }
-    })
-  })
+//       }
+//     })
+//   })
 
  
+app.post('/checkout', function(req, res) {
+  fs.readFile('items.json', function(error, data) {
+    if (error) {
+      res.status(500).end()
+    } else {
+      const itemsJson = JSON.parse(data)
+      const itemsArray = itemsJson.items
+      let total = 0
+      req.body.items.forEach(function(item) {
+        const itemJson = itemsArray.find(function(i) {
+          return i.id == item.id
+          
+        })
+        total = total + itemJson.price * item.quantity 
+      })
 
-  
+      stripe.charges.create(
+        {
+          amount: 2000,
+          currency: 'usd',
+          source: req.body.stripeTokenId,
+        }, 
+        function(err, charge) {
+          console.log(charge)
+          res.json({ message: `Your purchase is successful. Your total is $${total / 100}! \r Your Charge ID: ${charge.id}` })
+        }).catch(function() {
+        console.log('Charge Fail')
+        res.status(500).end()
+      })
+
+    }
+  })
+})
+
 
 app.listen(3000)
 
