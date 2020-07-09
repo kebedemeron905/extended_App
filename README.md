@@ -4,27 +4,41 @@
 
 ## Application Overview 
 
-Utilizing the [Charges](https://stripe.com/docs/api/charges) and [Tokens](https://stripe.com/docs/api/tokens) APIs, this Express app allows users to accept payments using Stripe [Checkout](https://stripe.com/docs/payments/checkout). 
+Utilizing the [Charges](https://stripe.com/docs/api/charges) and [Tokens](https://stripe.com/docs/api/tokens) APIs, this Express app allows users to accept payments through Stripe [Checkout](https://stripe.com/docs/payments/checkout). Upon a successful payment, the app returns a JSON response displaying the total amount of the charge and Stripe charge Id.
+
 </br>
 
 
+### Libraries Used
 
-### How Does it Work
+* [EJS](https://ejs.co/)
+* [Express](https://expressjs.com/)
+* [Strip](https://stripe.com/docs/development/quickstart)
 
 
-1. Install dependencies
+### Run App Locally
+
+
+1. Clone app from Github
 
 ```
-npm install 
+npm install --save express ejs stripe
 ```
 
-2. Run the application
+
+2. Install dependencies
+
+```
+npm install --save express ejs stripe
+```
+
+3. Run the application
 
 ```
 node server.js
 ```
 
-3. Go to `localhost:3000` to see application
+4. Go to `localhost:3000` to make a purchase
 
 ## Design Approach
 
