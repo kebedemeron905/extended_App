@@ -6,23 +6,31 @@
 
 Utilizing the [Charges](https://stripe.com/docs/api/charges) and [Tokens](https://stripe.com/docs/api/tokens) APIs, this Express app allows users to accept payments through Stripe [Checkout](https://stripe.com/docs/payments/checkout). Upon a successful payment, the app returns a JSON response displaying the total amount of the charge and Stripe charge Id.
 
+
+
 </br>
 
+#### Design Flow:
 
-### Libraries Used
+* When a user clicks on the ‘Add to Cart’ button, selected items will be added to a cart at the bottom of the page. Users can modify the item quantity,  remove the item, or add additional items. 
 
-* [EJS](https://ejs.co/)
-* [Express](https://expressjs.com/)
-* [Strip](https://stripe.com/docs/development/quickstart)
+![Add to Cart](images/image2.png)
 
 
-### Run App Locally
+#### Libraries Used :
+
+* [EJS](https://ejs.co/):
+* [Express](https://expressjs.com/):
+* [Strip](https://stripe.com/docs/development/quickstart):
+
+
+#### Run App Locally
 
 
 1. Clone app from Github
 
 ```
-npm install --save express ejs stripe
+https://github.com/kebedemeron905/express-stripe.git
 ```
 
 
@@ -38,7 +46,7 @@ npm install --save express ejs stripe
 node server.js
 ```
 
-4. Go to `localhost:3000` to make a purchase
+4. Go to `localhost:3000` to make add items to cart, checkout, and receive payment confirmation
 
 ## Design Approach
 
