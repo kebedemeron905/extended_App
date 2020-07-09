@@ -31,7 +31,8 @@ The Checkout pop-up will collect the user’s information and send it to Stripe.
 </b>
 
 
-#### Run App Locally:
+
+### Run App Locally:
 
 
 1. Clone app from Github
@@ -56,7 +57,8 @@ node server.js
 4. Go to `localhost:3000` to add items to cart, checkout, and receive payment confirmation
 
 
-## Design Approach
+## App Design Approach
+
 
 
 
@@ -64,11 +66,14 @@ node server.js
 ## Language/Frameworks Used
 
 * [EJS](https://ejs.co/):
+* [Node.js](https://nodejs.org/en/about/):
 * [Express](https://expressjs.com/):
 
+Node.js allows me to build server-side applications in JavaScript. Thus, it was my language of choice. I chose Express as my web framework for multiple reasons: it is a minimalist framework; it is the most common framework used for developing Node.js; it makes Node.js app development fast and easy; and, it easily integrates with different template engines like EJS. Lastly, I chose EJS as my view templating language because it allows me to put server side code in my html.
 
 
 
+## How to Extend App 
 
-## How to Extend App with Stripe
+I want to extend this app with the intent of providing users a seamless and end-to-end payment experience. Thus, I want the app to include authentication, automatic emails with payment receipts, or a refund feature. 
 
