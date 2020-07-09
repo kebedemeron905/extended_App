@@ -6,7 +6,8 @@ Utilizing the [Charges](https://stripe.com/docs/api/charges) and [Tokens](https:
 
 #### Design Flow:
 
-1. User clicks on the ‘Add to Cart’ button to add selected items to a cart at the bottom of the page. Users can modify item quantity, remove item, or add additional items. 
+1. User clicks on the ‘Add to Cart’ button to add selected items to a cart at the bottom of the page. Users can modify item quantity, remove item, or add additional items.
+The Checkout pop-up will collect the user’s information and send it to Stripe. Stripe will then parse this information, tokenize it, and send the token to the server we created in this sample application. Using the token and the secret API key, we can then create charges on the server. 
 
 ![Add to Cart](images/image2.png)
 
@@ -15,18 +16,18 @@ Utilizing the [Charges](https://stripe.com/docs/api/charges) and [Tokens](https:
 ![Enter Payment Info](images/image3.png)
 
 </b>
-
-The Checkout pop-up will collect the user’s information and send it to Stripe. Stripe will then parse this information, tokenize it, and send the token to the server we created in this sample application. Using the token and the secret API key, we can then create charges on the server.
-
+</b>
 
 3. User will receive a payment confirmation isplaying the total amount of the charge and Stripe charge Id.
 
 ![Payment Confirmation](images/image4.png)
 
-
+</b>
+</b>
 4. User clicks OK to reset cart to $0. 
 
-
+</b>
+</b>
 
 #### Libraries Used :
 
