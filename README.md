@@ -4,7 +4,7 @@
 
 ## Application Overview 
 
-<a href="https://stripe.com/docs/payments/checkout">Checkout</a>
+[here](https://stripe.com/docs/payments/checkout)
 
 
 
