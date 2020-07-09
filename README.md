@@ -4,10 +4,10 @@
 
 ## Application Overview 
 
-Utilizing the Charges and Tokens APIs, this Express app allows users to accept payments using Stripe Checkout. 
+Utilizing the [Charges](https://stripe.com/docs/api/charges) and [Tokens](https://stripe.com/docs/api/tokens) APIs, this Express app allows users to accept payments using Stripe [Checkout](https://stripe.com/docs/payments/checkout). 
 </br>
 
-[Checkout](https://stripe.com/docs/payments/checkout)
+
 
 ### How Does it Work
 
