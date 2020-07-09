@@ -1,6 +1,6 @@
-# Node.js E-commerce App with Stripe Checkout
+# E-commerce App Using Node.JS and Stripe Checkout
 
-
+![Homepage](images/image1.png)
 
 ## Application Overview 
 
