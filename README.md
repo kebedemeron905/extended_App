@@ -36,7 +36,6 @@ Utilizing the [Charges](https://stripe.com/docs/api/charges) and [Tokens](https:
 
 * Have Node v10+ installed 
 
-* Replace .env file with your public and secret API keys
 
 ### Run App Locally:
 
