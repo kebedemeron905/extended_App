@@ -53,7 +53,10 @@ https://github.com/kebedemeron905/express-stripe.git
 npm install --save express ejs stripe
 ```
 
-3. Run the application
+3.  Replace .env file with your public and secret API keys
+
+
+4. Run the application
 
 ```
 node server.js
