@@ -54,7 +54,7 @@ npm install --save express ejs stripe
 node server.js
 ```
 
-4. Go to `localhost:3000` to add items to cart, checkout, and receive payment confirmation
+4. Go to `localhost:3000/store` to access the store page, add items to cart, checkout, and receive payment confirmation
 
 </br>
 </br>
@@ -71,5 +71,5 @@ Node.js allows me to build server-side applications in JavaScript. Thus, it was 
 
 ## How to Extend App 
 
-I want to extend this app with the intent of providing users a seamless and end-to-end payment experience. Features to include are, but not limited to, authentication, automatic emails with payment receipts, or refund. 
+I want to extend this app with the intent of providing users a seamless and end-to-end payment experience. Features to include are, but not limited to, authentication, automatic emails with payment receipts, or refund feature. 
 
