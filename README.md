@@ -62,7 +62,7 @@ npm install --save express ejs stripe
 node server.js
 ```
 
-4. Go to `localhost:3000/store` to access the store page, add items to cart, checkout, and receive payment confirmation
+5. Go to `localhost:3000/store` to access the store page, add items to cart, checkout, and receive payment confirmation
 
 </br>
 </br>
