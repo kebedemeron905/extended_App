@@ -30,7 +30,13 @@ Utilizing the [Charges](https://stripe.com/docs/api/charges) and [Tokens](https:
 </b>
 </b>
 
+### Prerequisites Before Running Application
 
+* Before implementing this application, you need to create a Stripe account. This account gives you access to the Developer Dashboard where you find your API keys.
+
+* Have Node v10+ installed 
+
+* Replace .env file with your public and secret API keys
 
 ### Run App Locally:
 
